@@ -1,209 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/index.css" />
-		<title>Front task</title>
-	</head>
-	<body>
-		<header></header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Front task</title>
+  </head>
+  <body>
+    <header
+      role="heading"
+      class="bg-black h-[70px] sticky top-0 flex flex-row items-center justify-between text-[#FFF] px-40"
+    >
+      <h1 class="font-bold text-[24px]">My Blog</h1>
+      <div class="flex flex-row items-center text-[20px] font-normal">
+        <a class="ml-4 cursor-pointer">Home</a>
+        <a class="ml-4 cursor-pointer">about</a>
+        <a class="ml-4 cursor-pointer">Contact</a>
 
-		<!-- start the sidebar section-->
-		<section class="sidebar">
-			<!-- start the upper sidebar section-->
-			<div class="sidebar-up">
-				<div class="sidebar-up__box">
-					<div class="sidebar-up__box-header">
-						<h1 class="sidebar__box-header">About the Blog</h1>
-					</div>
+        <div class="relative inline-block ml-5">
+          <button
+            onclick="hanldeClickDwopDown()"
+            class="bg-[#FFF] text-[#333] rounded-[10px] px-4 py-2 cursor-pointer dropbtn"
+          >
+            Dropdown
+          </button>
+          <div
+            id="myDropdown"
+            class="dropdown-content absolute bg-[#f1f1f1] min-w-[140px] overflow-auto rounded-[8px] text-[#333]"
+          >
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-					<div class="sidebar-up__box-content">
-						<p class="sidebar__box-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore
-							eu fugiat nulla pariatur. Excepteur sint occaecat
-						</p>
-					</div>
-				</div>
+    <!-- start the sidebar section-->
+    <section class="sidebar">
+      <!-- start the upper sidebar section-->
+      <div class="sidebar-up">
+        <div class="sidebar-up__box">
+          <div class="sidebar-up__box-header">
+            <h1 class="sidebar__box-header">About the Blog</h1>
+          </div>
 
-				<div class="sidebar-up__box">
-					<div class="sidebar-up__box-header">
-						<h1 class="sidebar__box-header">Reccent Posts</h1>
-					</div>
+          <div class="sidebar-up__box-content">
+            <p class="sidebar__box-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat
+            </p>
+          </div>
+        </div>
 
-					<div class="sidebar__box-contet">
-						<ul class="sidebar__box-list">
-							<li class="sidebar__box-item">Test List 1</li>
-							<li class="sidebar__box-item">Test List 2</li>
-							<li class="sidebar__box-item">Test List 3</li>
-							<li class="sidebar__box-item">Test List 4</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- finish the upper sidebar section-->
+        <div class="sidebar-up__box">
+          <div class="sidebar-up__box-header">
+            <h1 class="sidebar__box-header">Reccent Posts</h1>
+          </div>
 
-			<!-- start the down sidebar section-->
-			<div class="sidebar-bottom">
-				<div class="sidebar-bottom__box">
-					<div class="sidebar-bottom__box-header">
-						<h1 class="sidebar__box-header">News & Updates</h1>
-					</div>
-
-					<div class="sidebar__box-contet">
-						<ul class="sidebar__box-list">
-							<li class="sidebar__box-item">Test List 1</li>
-							<li class="sidebar__box-item">Test List 2</li>
-							<li class="sidebar__box-item">Test List 3</li>
-							<li class="sidebar__box-item">Test List 4</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- finish the down sidebar section-->
-		</section>
-		<!-- finish the sidebar section -->
-		<main class="article-container">
-			<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">
-					<h2>Mastering React: A Beginner's Guide</h2>
-					<p>Dive into the world of React and learn how to build powerful web applications.</p>
-					<p class="author-date">John Doe • May 1, 2023</p>
-			</article>
-			<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">            
-					<h2>Designing for Accessibility</h2>
-					<p>Learn how to create inclusive and accessible designs for all users.</p>
-					<p class="author-date">Jane Smith • April 15, 2023</p>
-			</article>
-			<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">            
-					<h2>The Future of Sustainable Fashion</h2>
-					<p>Explore the latest trends and innovations in eco-friendly fashion.</p>
-					<p class="author-date">Sarah Lee • March 28, 2023</p>
-			</article>
-			<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">            
-					<h2>The Art of Minimalist Living</h2>
-					<p>Discover the benefits and practical tips for living a minimalist lifestyle.</p>
-					<p class="author-date">Michael Johnson • February 10, 2023</p>
-			</article>
-			<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">            
-				<h2>Mastering React: A Beginner's Guide</h2>
-				<p>Dive into the world of React and learn how to build powerful web applications.</p>
-				<p class="author-date">John Doe • May 1, 2023</p>
-		</article>
-		<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">            
-				<h2>Designing for Accessibility</h2>
-				<p>Learn how to create inclusive and accessible designs for all users.</p>
-				<p class="author-date">Jane Smith • April 15, 2023</p>
-		</article>
-		<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">            
-				<h2>The Future of Sustainable Fashion</h2>
-				<p>Explore the latest trends and innovations in eco-friendly fashion.</p>
-				<p class="author-date">Sarah Lee • March 28, 2023</p>
-		</article>
-		<article class="article-box">
-					<img src="css/img/pink.png" alt="Article Image">            
-				<h2>The Art of Minimalist Living</h2>
-				<p>Discover the benefits and practical tips for living a minimalist lifestyle.</p>
-				<p class="author-date">Michael Johnson • February 10, 2023</p>
-		</article>
-			
-			</main>
-
-		 <main>
-        <section class="tweet">
-            <h3 class="tweet__text">Tweets</h3>
-            <ul>
-                <li>
-                    <a href="#">
-                        <div class="tweet__inner">
-                            <div class="tweet_left">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24px"
-                                    height="24px" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                </svg>
-                            </div>
-                            <div class="tweet__right">
-                                <h4 class="tweet__content">
-                                    Check out this new blog post about sustainable fashion
-                                </h4>
-                                <div class="tweet__detail">
-                                    <span class="tweet__author">
-                                        Example User
-                                    </span>
-                                    <span class="tweet__white_space"> </span>
-                                    <span class="tweet__white_space"> </span>
-                                    <span class="tweet__date">
-                                        June 1, 2023
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+          <div class="sidebar__box-contet">
+            <ul class="sidebar__box-list">
+              <li class="sidebar__box-item">Test List 1</li>
+              <li class="sidebar__box-item">Test List 2</li>
+              <li class="sidebar__box-item">Test List 3</li>
+              <li class="sidebar__box-item">Test List 4</li>
             </ul>
-        </section>
+          </div>
+        </div>
+      </div>
+      <!-- finish the upper sidebar section-->
+
+      <!-- start the down sidebar section-->
+      <div class="sidebar-bottom">
+        <div class="sidebar-bottom__box">
+          <div class="sidebar-bottom__box-header">
+            <h1 class="sidebar__box-header">News & Updates</h1>
+          </div>
+
+          <div class="sidebar__box-contet">
+            <ul class="sidebar__box-list">
+              <li class="sidebar__box-item">Test List 1</li>
+              <li class="sidebar__box-item">Test List 2</li>
+              <li class="sidebar__box-item">Test List 3</li>
+              <li class="sidebar__box-item">Test List 4</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- finish the down sidebar section-->
+    </section>
+    <!-- finish the sidebar section -->
+    <main class="article-container">
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>Mastering React: A Beginner's Guide</h2>
+        <p>
+          Dive into the world of React and learn how to build powerful web
+          applications.
+        </p>
+        <p class="author-date">John Doe • May 1, 2023</p>
+      </article>
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>Designing for Accessibility</h2>
+        <p>
+          Learn how to create inclusive and accessible designs for all users.
+        </p>
+        <p class="author-date">Jane Smith • April 15, 2023</p>
+      </article>
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>The Future of Sustainable Fashion</h2>
+        <p>
+          Explore the latest trends and innovations in eco-friendly fashion.
+        </p>
+        <p class="author-date">Sarah Lee • March 28, 2023</p>
+      </article>
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>The Art of Minimalist Living</h2>
+        <p>
+          Discover the benefits and practical tips for living a minimalist
+          lifestyle.
+        </p>
+        <p class="author-date">Michael Johnson • February 10, 2023</p>
+      </article>
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>Mastering React: A Beginner's Guide</h2>
+        <p>
+          Dive into the world of React and learn how to build powerful web
+          applications.
+        </p>
+        <p class="author-date">John Doe • May 1, 2023</p>
+      </article>
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>Designing for Accessibility</h2>
+        <p>
+          Learn how to create inclusive and accessible designs for all users.
+        </p>
+        <p class="author-date">Jane Smith • April 15, 2023</p>
+      </article>
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>The Future of Sustainable Fashion</h2>
+        <p>
+          Explore the latest trends and innovations in eco-friendly fashion.
+        </p>
+        <p class="author-date">Sarah Lee • March 28, 2023</p>
+      </article>
+      <article class="article-box">
+        <img src="css/img/pink.png" alt="Article Image" />
+        <h2>The Art of Minimalist Living</h2>
+        <p>
+          Discover the benefits and practical tips for living a minimalist
+          lifestyle.
+        </p>
+        <p class="author-date">Michael Johnson • February 10, 2023</p>
+      </article>
     </main>
-		<footer class="footer-container">
-		<div class="footer-top-container">
-			<!-- links -->
-			<div class="footer-website-name">
-				<!-- website name -->
-				<span>Website Name</span>
-			</div>
-			<div class="footer-links-container">
-				<!-- link columns -->
-				<div class="footer-links-list">
-					<h3 class="footer-links-header">Resources</h3>
-					<ul>
-						<li><a href="#">Docs</a></li>
-						<li><a href="#">Learn</a></li>
-						<li><a href="#">Showcase</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Previews</a></li>
-					</ul>
-				</div>
-				<div class="footer-links-list">
-					<h3 class="footer-links-header">More</h3>
-					<ul>
-						<li><a href="#">Github</a></li>
-						<li><a href="#">Releases</a></li>
-						<li><a href="#">Contact Sales</a></li>
-					</ul>
-				</div>
-				<div class="footer-links-list">
-					<h3 class="footer-links-header">About Us</h3>
-					<ul>
-						<li><a href="#">Open Source Software</a></li>
-						<li><a href="#">Github</a></li>
-						<li><a href="#">X Sales</a></li>
-					</ul>
-				</div>
-				<div class="footer-links-list">
-					<h3 class="footer-links-header">Legal</h3>
-					<ul>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Cookies Preferences</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="footer-paragraph">
-			<!-- footer paragraph -->
-			<span>@ 2024 Our Website</span>
-		</div>
-	</footer>
-	</body>
+
+    <main>
+      <section class="tweet">
+        <h3 class="tweet__text">Tweets</h3>
+        <ul>
+          <li>
+            <a href="#">
+              <div class="tweet__inner">
+                <div class="tweet_left">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    height="24px"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                    />
+                  </svg>
+                </div>
+                <div class="tweet__right">
+                  <h4 class="tweet__content">
+                    Check out this new blog post about sustainable fashion
+                  </h4>
+                  <div class="tweet__detail">
+                    <span class="tweet__author"> Example User </span>
+                    <span class="tweet__white_space"> </span>
+                    <span class="tweet__white_space"> </span>
+                    <span class="tweet__date"> June 1, 2023 </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer-container">
+      <div class="footer-top-container">
+        <!-- links -->
+        <div class="footer-website-name">
+          <!-- website name -->
+          <span>Website Name</span>
+        </div>
+        <div class="footer-links-container">
+          <!-- link columns -->
+          <div class="footer-links-list">
+            <h3 class="footer-links-header">Resources</h3>
+            <ul>
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Showcase</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Previews</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-list">
+            <h3 class="footer-links-header">More</h3>
+            <ul>
+              <li><a href="#">Github</a></li>
+              <li><a href="#">Releases</a></li>
+              <li><a href="#">Contact Sales</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-list">
+            <h3 class="footer-links-header">About Us</h3>
+            <ul>
+              <li><a href="#">Open Source Software</a></li>
+              <li><a href="#">Github</a></li>
+              <li><a href="#">X Sales</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-list">
+            <h3 class="footer-links-header">Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies Preferences</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-paragraph">
+        <!-- footer paragraph -->
+        <span>@ 2024 Our Website</span>
+      </div>
+    </footer>
+    <script>
+      function hanldeClickDwopDown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
 </html>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/index.css" />
+
+  <title>Front task</title>
+
+  <style></style>
+</head>
