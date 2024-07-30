@@ -31,4 +31,8 @@ ul {
 	width: 400px;
 }
 
+.sidebar__box-list {
+	list-style-type: none;
+}
+
 /* finish the sidebar styles */
