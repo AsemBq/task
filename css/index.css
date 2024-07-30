@@ -1,3 +1,5 @@
+/* start the sidebar styles */
+
 .sidebar {
 	display: flex;
 	flex-direction: column;
@@ -9,3 +11,5 @@
 .sidebar-up {
 	padding: 2rem;
 }
+
+/* finish the sidebar styles */
