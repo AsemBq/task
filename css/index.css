@@ -1,0 +1,43 @@
+ul {
+	padding-inline-start: 0;
+}
+
+/* start the sidebar styles */
+
+.sidebar {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30%;
+	height: 100%;
+}
+
+.sidebar-up {
+	padding: 2rem;
+}
+
+.sidebar-bottom {
+	padding: 2rem;
+}
+
+.sidebar-up__box,
+.sidebar-bottom__box {
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+	padding: 0 1rem;
+	margin: 1rem 0;
+	height: 200px;
+	width: 400px;
+}
+
+.sidebar__box-list {
+	list-style-type: none;
+}
+
+.sidebar__box-item {
+	font-size: 1.05em;
+	margin-top: 0.5rem;
+}
+
+/* finish the sidebar styles */
