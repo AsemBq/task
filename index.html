@@ -7,6 +7,37 @@
   <link rel="stylesheet" href="/css/index.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Front task</title>
+  <script>
+    function hanldeClickDwopDown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .dropdown-content {
+      display: none;
+    }
+
+    .dropdown-content a {
+      padding: 10px;
+      display: block;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
@@ -17,6 +48,19 @@
       <a class="ml-4 cursor-pointer">Home</a>
       <a class="ml-4 cursor-pointer">about</a>
       <a class="ml-4 cursor-pointer">Contact</a>
+
+
+      <div class="relative inline-block ml-5">
+        <button onclick="hanldeClickDwopDown()"
+          class="bg-[#FFF] text-[#333] rounded-[10px] px-4 py-2 cursor-pointer dropbtn ">Dropdown</button>
+        <div id="myDropdown"
+          class="dropdown-content absolute bg-[#f1f1f1] min-w-[140px] overflow-auto rounded-[8px] text-[#333]">
+          <a href="#">Item 1</a>
+          <a href="#">Item 2</a>
+          <a href="#">Item 3</a>
+        </div>
+      </div>
+
     </div>
   </header>
   <footer></footer>
