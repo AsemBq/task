@@ -35,4 +35,9 @@ ul {
 	list-style-type: none;
 }
 
+.sidebar__box-item {
+	font-size: 1.05em;
+	margin-top: 0.5rem;
+}
+
 /* finish the sidebar styles */
