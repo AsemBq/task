@@ -6,6 +6,7 @@ ul {
 
 .sidebar {
 	display: flex;
+	position: fixed;
 	flex-direction: column;
 	justify-content: space-around;
 	width: 30%;
