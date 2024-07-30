@@ -16,4 +16,13 @@
 	padding: 2rem;
 }
 
+.sidebar-up__box {
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+	padding: 0 1rem;
+	margin: 1rem 0;
+	height: 200px;
+	width: 400px;
+}
+
 /* finish the sidebar styles */
