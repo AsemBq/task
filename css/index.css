@@ -9,6 +9,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
+  width: 70%;
 }
 
 .article-box {
@@ -39,7 +40,7 @@ body {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 451px) {
+@media only screen and (max-width: 571px) {
   .article-box {
     width: 100%;
   }
